@@ -2,13 +2,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/routes/routes.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/widget_helper/image_widget.dart';
-import 'package:multi_radio/widget_helper/menu_item_widget.dart';
+import 'package:compaz_radio/routes/routes.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/widget_helper/image_widget.dart';
+import 'package:compaz_radio/widget_helper/menu_item_widget.dart';
 import 'package:flutter_share/flutter_share.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 import 'package:store_redirect/store_redirect.dart';
@@ -83,7 +83,7 @@ class DrawerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: CustomColor.primaryColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(topRight: Radius.circular(30.r)),
       ),

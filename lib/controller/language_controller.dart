@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/utils/local_storage.dart';
+import 'package:compaz_radio/utils/local_storage.dart';
 import '../languages/datastorage_service.dart';
 
 class LanguageController extends GetxController {

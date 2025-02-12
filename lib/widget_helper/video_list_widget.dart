@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:multi_radio/utils/size.dart';
+import 'package:compaz_radio/utils/size.dart';
 import '../utils/dimsensions.dart';
 
 class VideoListWidget extends StatelessWidget {

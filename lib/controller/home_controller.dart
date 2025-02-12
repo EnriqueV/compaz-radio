@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:animate_icons/animate_icons.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/data/radio_list_data.dart';
+import 'package:compaz_radio/data/radio_list_data.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../model/banner_model.dart';

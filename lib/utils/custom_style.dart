@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
 
 class CustomStyler {
   static var splashTitleStyle =

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multi_radio/utils/size.dart';
+import 'package:compaz_radio/utils/size.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NetworkWidget extends StatelessWidget {

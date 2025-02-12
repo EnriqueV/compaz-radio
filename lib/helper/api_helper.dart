@@ -1,4 +1,4 @@
-import 'package:multi_radio/utils/config.dart';
+import 'package:compaz_radio/utils/config.dart';
 
 
 class ApiHelper {

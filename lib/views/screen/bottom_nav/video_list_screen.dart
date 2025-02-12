@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
 import 'package:video_player/video_player.dart';
 import '../../../controller/youtube_controller.dart';
 import '../../../utils/dimsensions.dart';

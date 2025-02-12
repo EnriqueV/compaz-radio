@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/strings.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/strings.dart';
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({Key? key}) : super(key: key);

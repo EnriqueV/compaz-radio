@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:multi_radio/views/screen/bottom_nav/video_streaming_screen.dart';
+import 'package:compaz_radio/views/screen/bottom_nav/video_streaming_screen.dart';
 import 'dart:convert';
 import '../model/youtube_video_model.dart';
 

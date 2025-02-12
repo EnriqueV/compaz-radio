@@ -1,7 +1,7 @@
 // import 'dart:convert';
 // import 'package:http/http.dart' as http;
-// import 'package:multi_radio/helper/api_helper.dart';
-// import 'package:multi_radio/model/radio_model.dart';
+// import 'package:compaz_radio/helper/api_helper.dart';
+// import 'package:compaz_radio/model/radio_model.dart';
 //
 //
 // class ApiServices{

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:multi_radio/helper/unit_id_helper.dart';
+import 'package:compaz_radio/helper/unit_id_helper.dart';
 
 class AdMobHelper {
   InterstitialAd? interstitialAd;

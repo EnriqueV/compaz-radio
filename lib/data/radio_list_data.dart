@@ -1,5 +1,5 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
-import 'package:multi_radio/model/radio_list_model.dart';
+import 'package:compaz_radio/model/radio_list_model.dart';
 
 typedef OnTap = Function(RadioListModel radioListModel);
 

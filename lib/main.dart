@@ -1,16 +1,23 @@
+import 'package:compaz_radio/helper/admob_helper.dart';
+import 'package:compaz_radio/languages/datastorage_service.dart';
+import 'package:compaz_radio/languages/language_translation.dart';
+import 'package:compaz_radio/routes/routes.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/utils/themes.dart';
 import 'package:dynamic_themes/dynamic_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:multi_radio/helper/admob_helper.dart';
-import 'package:multi_radio/languages/datastorage_service.dart';
-import 'package:multi_radio/languages/language_translation.dart';
-import 'package:multi_radio/routes/routes.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/utils/themes.dart';
+import 'package:compaz_radio/helper/admob_helper.dart';
+import 'package:compaz_radio/languages/datastorage_service.dart';
+import 'package:compaz_radio/languages/language_translation.dart';
+import 'package:compaz_radio/routes/routes.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/utils/themes.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart'; 
 
 
@@ -102,7 +109,7 @@ class _MyAppState extends State<MyApp> {
                   ? Locale(storage.languageCode!, storage.countryCode)
                   : const Locale('en', 'US'),
               fallbackLocale: Locale('en', 'US'),
-              title: Strings.multiRadio,
+              title: Strings.appName,
               debugShowCheckedModeBanner: false,
               theme: theme,
               navigatorKey: Get.key,

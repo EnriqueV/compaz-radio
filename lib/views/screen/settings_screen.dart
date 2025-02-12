@@ -3,12 +3,12 @@ import 'package:dynamic_themes/dynamic_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/controller/language_controller.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/local_storage.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/utils/strings.dart';
+import 'package:compaz_radio/controller/language_controller.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/local_storage.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/utils/strings.dart';
 
 class SettingsScreen extends StatefulWidget {
   SettingsScreen({Key? key}) : super(key: key);

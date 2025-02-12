@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:multi_radio/routes/routes.dart';
+import 'package:compaz_radio/routes/routes.dart';
 
 class SplashController extends GetxController {
 

@@ -7,14 +7,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:multi_radio/controller/home_controller.dart';
-import 'package:multi_radio/helper/unit_id_helper.dart';
-import 'package:multi_radio/helper/admob_helper.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/widget_helper/image_widget.dart';
-import 'package:multi_radio/widget_helper/network_widget.dart';
+import 'package:compaz_radio/controller/home_controller.dart';
+import 'package:compaz_radio/helper/unit_id_helper.dart';
+import 'package:compaz_radio/helper/admob_helper.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/widget_helper/image_widget.dart';
+import 'package:compaz_radio/widget_helper/network_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

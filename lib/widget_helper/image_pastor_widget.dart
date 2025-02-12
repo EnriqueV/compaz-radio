@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/strings.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/strings.dart';
 
 class ImagePastorWidget extends StatelessWidget {
   const ImagePastorWidget({Key? key}) : super(key: key);

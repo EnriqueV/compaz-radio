@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/views/screen/bottom_nav/video_list_screen.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/views/screen/bottom_nav/video_list_screen.dart';
 
 import '../../../controller/bottom_nav_bar_controller.dart';
 import '../../../utils/custom_color.dart';

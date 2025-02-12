@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
-import 'package:multi_radio/controller/splash_controller.dart';
-import 'package:multi_radio/views/screen/about_screen.dart';
-import 'package:multi_radio/views/screen/home_screen.dart';
-import 'package:multi_radio/views/screen/live_chat_screen.dart';
-import 'package:multi_radio/views/screen/radio_list_screen.dart';
-import 'package:multi_radio/views/screen/settings_screen.dart';
-import 'package:multi_radio/views/screen/splash_screen.dart';
+import 'package:compaz_radio/controller/splash_controller.dart';
+import 'package:compaz_radio/views/screen/about_screen.dart';
+import 'package:compaz_radio/views/screen/home_screen.dart';
+import 'package:compaz_radio/views/screen/live_chat_screen.dart';
+import 'package:compaz_radio/views/screen/radio_list_screen.dart';
+import 'package:compaz_radio/views/screen/settings_screen.dart';
+import 'package:compaz_radio/views/screen/splash_screen.dart';
 
 import '../views/screen/bottom_nav/bottom_navigation_widget.dart';
 import '../views/screen/bottom_nav/video_streaming_screen.dart';

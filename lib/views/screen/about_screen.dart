@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/widget_helper/image_widget.dart';
-import 'package:multi_radio/widget_helper/image_pastor_widget.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/widget_helper/image_widget.dart';
+import 'package:compaz_radio/widget_helper/image_pastor_widget.dart';
 
 
-import 'package:multi_radio/widget_helper/network_widget_man.dart';
+import 'package:compaz_radio/widget_helper/network_widget_man.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/strings.dart';
 
@@ -27,7 +27,7 @@ class AboutScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        color: CustomColor.primaryBackgroundColor,
+        color: CustomColor.primaryColor,
         child: ListView(
           children: [
             addVerticalSpace(40.h),

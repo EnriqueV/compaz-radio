@@ -1,5 +1,5 @@
 // Turkish Translations
-import 'package:multi_radio/utils/strings.dart';
+import 'package:compaz_radio/utils/strings.dart';
 
 const Map<String, String> bnBD = {
   Strings.multiRadio: "মাল্টি রেডিও",

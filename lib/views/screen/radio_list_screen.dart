@@ -1,21 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:miniplayer/miniplayer.dart';
-import 'package:multi_radio/model/radio_list_model.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/views/screen/drawer_screen.dart';
-import 'package:multi_radio/widget_helper/player.dart';
-import 'package:multi_radio/data/radio_list_data.dart';
+import 'package:compaz_radio/model/radio_list_model.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/views/screen/drawer_screen.dart';
+import 'package:compaz_radio/widget_helper/player.dart';
+import 'package:compaz_radio/data/radio_list_data.dart';
+import 'dart:ui'; // Añadido para el efecto glassmorphism
 
-// Inicializamos con la primera radio de la lista
 ValueNotifier<RadioListModel?> currentlyPlaying = ValueNotifier(radioChanelList[0]);
 const double playerMinHeight = 70;
 const miniPlayerPercentageDeclaration = 0.2;
 
-// Creamos un controlador para el Miniplayer
 final playerController = MiniplayerController();
-
-// Inicializamos el playerExpandProgress con la altura máxima
 final ValueNotifier<double> playerExpandProgress = ValueNotifier(800);
 
 class RadioListScreen extends StatelessWidget {
@@ -23,7 +20,6 @@ class RadioListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Expandimos el player al iniciar
     WidgetsBinding.instance.addPostFrameCallback((_) {
       playerController.animateToHeight(state: PanelState.MAX);
     });
@@ -69,17 +65,43 @@ class RadioListScreen extends StatelessWidget {
 Widget _bodyWidget(BuildContext context) {
   return Stack(
     children: [
+      // Background con imagen
+      Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.jpg'), // Asegúrate de tener esta imagen
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      
+      // Capa de glassmorphism
+      BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.white.withOpacity(0.2),
+                Colors.white.withOpacity(0.1),
+              ],
+            ),
+          ),
+        ),
+      ),
+
       // Imagen central
       Center(
         child: Container(
-          width: 200, // Ajusta según necesites
-          height: 200, // Ajusta según necesites
+          width: 200,
+          height: 200,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/compaz.png'), // Asegúrate de tener esta imagen
+              image: AssetImage('assets/images/compaz.png'),
               fit: BoxFit.contain,
             ),
-            // Opcional: añadir sombra o efectos
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),

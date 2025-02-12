@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:multi_radio/controller/home_controller.dart';
-import 'package:multi_radio/data/radio_list_data.dart';
-import 'package:multi_radio/model/radio_list_model.dart';
-import 'package:multi_radio/widget_helper/audio_list_tile.dart';
+import 'package:compaz_radio/controller/home_controller.dart';
+import 'package:compaz_radio/data/radio_list_data.dart';
+import 'package:compaz_radio/model/radio_list_model.dart';
+import 'package:compaz_radio/widget_helper/audio_list_tile.dart';
 
 typedef OnTap(final RadioListModel radioListModel);
 

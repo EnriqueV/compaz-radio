@@ -1,17 +1,18 @@
 import 'package:animate_icons/animate_icons.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 import 'package:lottie/lottie.dart';
 import 'package:miniplayer/miniplayer.dart';
-import 'package:multi_radio/controller/home_controller.dart';
-import 'package:multi_radio/data/radio_list_data.dart';
-import 'package:multi_radio/model/radio_list_model.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/utils/utils.dart';
-import 'package:multi_radio/widget_helper/network_widget.dart';
+import 'package:compaz_radio/controller/home_controller.dart';
+import 'package:compaz_radio/data/radio_list_data.dart';
+import 'package:compaz_radio/model/radio_list_model.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/utils/utils.dart';
+import 'package:compaz_radio/widget_helper/network_widget.dart';
 
 // Constantes necesarias
 const double playerMinHeight = 70;
@@ -84,7 +85,7 @@ class DetailedPlayer extends StatelessWidget {
           final sliderValue = 0.3.obs;
           return Container(
             decoration:
-                BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
+                BoxDecoration(color: CustomColor.primaryColor.withOpacity(0.9)),
             child: Column(
               mainAxisAlignment: mainSpaceBet,
               children: [
@@ -103,8 +104,8 @@ class DetailedPlayer extends StatelessWidget {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Theme.of(context).primaryColor.withOpacity(0.9),
-                            Theme.of(context).primaryColor.withOpacity(0.8),
+                            CustomColor.primaryColor.withOpacity(0.9),
+                            CustomColor.primaryColor.withOpacity(0.5),
                           ],
                           stops: const [
                             0.1,
@@ -244,7 +245,7 @@ class DetailedPlayer extends StatelessWidget {
                                   height: 63.h,
                                   child: CircleAvatar(
                                     backgroundColor:
-                                        Theme.of(context).primaryColor,
+                                        CustomColor.primaryColor,
                                     child: AnimateIcons(
                                       startIcon: _controller.isPressed.value
                                           ? Icons.pause
@@ -323,7 +324,7 @@ class DetailedPlayer extends StatelessWidget {
 
         final elementOpacity = 1 - 1 * percentageMiniPlayer;
         return Container(
-          decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+          decoration: BoxDecoration(color: CustomColor.primaryColor),
           child: Column(
             children: [
               Expanded(

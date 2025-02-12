@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:multi_radio/utils/custom_color.dart';
-import 'package:multi_radio/utils/dimsensions.dart';
-import 'package:multi_radio/utils/size.dart';
-import 'package:multi_radio/utils/strings.dart';
-import 'package:multi_radio/widget_helper/image_widget.dart';
+import 'package:compaz_radio/utils/custom_color.dart';
+import 'package:compaz_radio/utils/dimsensions.dart';
+import 'package:compaz_radio/utils/size.dart';
+import 'package:compaz_radio/utils/strings.dart';
+import 'package:compaz_radio/widget_helper/image_widget.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
