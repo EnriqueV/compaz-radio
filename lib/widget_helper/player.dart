@@ -427,11 +427,13 @@ class DetailedPlayer extends StatelessWidget {
         ),
       );
     }
-    
+     
+
     return Container(
+      margin: EdgeInsets.only(top: 20.h, left: 10.w, right: 10.w),
       height: 50.h,
       width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 10.w),
+     //  margin: EdgeInsets.only(top: 20.h, left: 10.w, right: 10.w)
       child: AnimatedSwitcher(
         duration: const Duration(milliseconds: 500),
         child: Container(
