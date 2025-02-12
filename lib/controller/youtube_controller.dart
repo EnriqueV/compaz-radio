@@ -48,9 +48,16 @@ class YoutubeController extends GetxController {
   }
 
  void playVideo(YoutubeVideoModel video) {
-  // Construimos la URL de embed optimizada para móviles
-  final embedUrl = 'https://www.youtube.com/embed/${video.id}?autoplay=1&playsinline=1';
-  Get.to(() => VideoStreamingScreen(embedUrl: embedUrl));
+  try {
+    Get.to(() => VideoStreamingScreen(embedUrl: video.embedUrl));
+  } catch (e) {
+    print('Error launching video: $e');
+    Get.snackbar(
+      'Error',
+      'No se pudo reproducir el video',
+      snackPosition: SnackPosition.BOTTOM,
+    );
+  }
 }
 
   void stopVideo() {

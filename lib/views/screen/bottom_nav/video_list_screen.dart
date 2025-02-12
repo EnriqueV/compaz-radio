@@ -1,3 +1,4 @@
+import 'package:compaz_radio/views/screen/bottom_nav/video_streaming_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:compaz_radio/utils/custom_color.dart';
@@ -34,9 +35,8 @@ class VideoListScreen extends StatelessWidget {
               visible: controller.isVideoPlaying.value,
               child: Stack(
                 children: [
-                  VideoPlayerView(
-                    url: controller.selectedVideoUrl.value,
-                    dataSourceType: DataSourceType.network,
+                   VideoStreamingScreen( // Cambiado de VideoPlayerView a VideoStreamingScreen
+                    embedUrl: controller.selectedVideoUrl.value,
                   ),
                   Positioned(
                     top: 12,
