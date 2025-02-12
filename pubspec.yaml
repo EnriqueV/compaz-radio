@@ -1,5 +1,5 @@
-name: multi_radio
-description: A radio app .
+name: Compaz
+description: COMPAZ RADIO .
    
 publish_to: "none"
   
@@ -38,13 +38,21 @@ dependencies:
   win32: ^5.5.4 
   lottie: ^2.3.2
   webview_flutter: ^4.4.2
- 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1  # Agregado
+
+# Configuración del icono
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"  # Asegúrate de poner tu icono en esta ruta
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"  # Puedes cambiar el color de fondo
+  adaptive_icon_foreground: "assets/images/app_icon.png"  # El mismo icono o uno diferente para Android
 
 flutter:
   uses-material-design: true
