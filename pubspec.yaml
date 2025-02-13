@@ -25,7 +25,6 @@ dependencies:
   dropdown_button2: ^2.3.9
   google_mobile_ads: ^5.3.1
   onesignal_flutter: ^5.2.9
-  flutter_share: ^2.0.0
   rating_dialog: ^2.0.4
   store_redirect: ^2.0.1
   dynamic_themes: ^1.1.0
