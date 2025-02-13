@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:compaz_radio/views/screen/bottom_nav/video_streaming_screen.dart';
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 import '../model/youtube_video_model.dart';
 
 class YoutubeController extends GetxController {
@@ -11,8 +11,6 @@ class YoutubeController extends GetxController {
   var videos = <YoutubeVideoModel>[].obs;
   var channelTitle = ''.obs;
   var channelThumbnail = ''.obs;
-  var selectedVideoUrl = ''.obs;
-  var isVideoPlaying = false.obs;
 
   @override
   void onInit() {
@@ -47,20 +45,33 @@ class YoutubeController extends GetxController {
     }
   }
 
- void playVideo(YoutubeVideoModel video) {
-  try {
-    Get.to(() => VideoStreamingScreen(embedUrl: video.embedUrl));
-  } catch (e) {
-    print('Error launching video: $e');
-    Get.snackbar(
-      'Error',
-      'No se pudo reproducir el video',
-      snackPosition: SnackPosition.BOTTOM,
-    );
+  Future<void> playVideo(YoutubeVideoModel video) async {
+    try {
+      final Uri url = Uri.parse(video.watchUrl); // Asumiendo que tienes una propiedad url en tu modelo
+      if (await canLaunchUrl(url)) {
+        await launchUrl(
+          url,
+          mode: LaunchMode.externalApplication,
+        );
+      } else {
+        Get.snackbar(
+          'Error',
+          'No se pudo abrir el video',
+          snackPosition: SnackPosition.BOTTOM,
+        );
+      }
+    } catch (e) {
+      print('Error al abrir el video: $e');
+      Get.snackbar(
+        'Error',
+        'No se pudo abrir el video',
+        snackPosition: SnackPosition.BOTTOM,
+      );
+    }
   }
-}
 
-  void stopVideo() {
-    isVideoPlaying(false);
-  }
+  // Ya no necesitamos estas variables y métodos
+  // var selectedVideoUrl = ''.obs;
+  // var isVideoPlaying = false.obs;
+  // void stopVideo() { ... }
 }

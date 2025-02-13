@@ -28,6 +28,10 @@
 	<string>ca-app-pub-8947740118769453~1348744026</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MPNowPlayingInfoPropertyPlaybackRate</key>
+	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Necesitamos acceso para reproducir contenido multimedia</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Necesitamos acceso a tu ubicación para proporcionarte una mejor experiencia</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
@@ -37,6 +41,7 @@
 		<string>audio</string>
 		<string>remote-notification</string>
 		<string>fetch</string>
+		<string>processing</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -57,13 +62,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Necesitamos acceso para reproducir contenido multimedia</string>
-	<key>MPNowPlayingInfoPropertyPlaybackRate</key>
+	<key>com.apple.developer.playable-content</key>
 	<true/>
 	<key>com.apple.mediaremote.set-playback-state</key>
-	<true/>
-	<key>com.apple.developer.playable-content</key>
 	<true/>
 </dict>
 </plist>
