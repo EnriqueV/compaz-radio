@@ -42,7 +42,7 @@ class NetworkWidgetMan extends StatelessWidget {
             launch('https://x.com/pastorvladimir?s=21');
           },
           child: Image.asset(
-            "assets/images/twitter.png",
+            "assets/images/x.png",
             height: 50.h,
             color:CustomColor.darkPrimaryColor,
           ),

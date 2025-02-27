@@ -49,7 +49,7 @@ class AboutScreen extends StatelessWidget {
         Container(
           margin: EdgeInsets.symmetric(horizontal: Dimensions.marginSize * 2),
           child: Text(
-            Strings.multiRadio.tr,
+            "Radio Compaz",
             textAlign: TextAlign.center,
             style: const TextStyle(fontSize: 30),
           ),

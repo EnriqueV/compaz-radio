@@ -1,5 +1,5 @@
 class Strings {
-  static const String appName = 'Compaz';
+  static const String appName = 'Radio Compaz';
   static const String appVersion = '3.1.0';
    
   // images
@@ -15,7 +15,7 @@ class Strings {
   static const String artists = 'Artistas';             
   static const String share = 'Compartir';
   static const String rateUs = 'Calificanos';
-  static const String donate = 'Donar';
+  static const String donate = 'Ofrendar';
   static const String map = 'Como llegar';
   static const String changeLanguage = 'Cambiar Idioma';
   static const String aboutUsDesc =
@@ -31,6 +31,6 @@ class Strings {
       'https://my.cbox.ws/compaz';
 
   static const String videoStreaming = 'Video Streaming';
-  static const String radio = 'Radio';
-  static const String video = 'Video';
+  static const String radio = '';
+  static const String video = 'Videos';
 }

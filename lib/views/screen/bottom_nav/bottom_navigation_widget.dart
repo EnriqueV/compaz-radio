@@ -38,7 +38,7 @@ class BottomNavigationWidget extends StatelessWidget {
                 ? Strings.radio.tr
                 : controller.selectedIndex.value == 1
                     ? Strings.video.tr
-                    : "",
+                    : "Radio Compaz",
             style: const TextStyle(
                 color: CustomColor.primaryColor, fontWeight: FontWeight.w500),
           ),

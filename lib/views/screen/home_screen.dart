@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(Strings.multiRadio.tr),
+          title: Text("Radio Compaz"),
           content: Text(Strings.exitFromApp.tr),
           actions: [
             TextButton(

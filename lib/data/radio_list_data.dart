@@ -5,8 +5,8 @@ typedef OnTap = Function(RadioListModel radioListModel);
 
 List<RadioListModel> radioChanelList = [
   RadioListModel(
-    title: 'Compaz Radio',
-    subTitle: 'SubTitle',
+    title: 'Radio Compaz',
+    subTitle: 'Sonidos de esperanza',
     image: 'assets/images/compaz.png',
     id: 0,
   ),
@@ -28,8 +28,8 @@ final audios = <Audio>[
   Audio.network(
     'https://c11.radioboss.fm:8423/stream',
     metas: Metas(
-      title: 'channel one',
-      // image: const MetasImage.asset('assets/images/channel-one.jpg'),
+      title: 'Radio Compaz',
+     image: const MetasImage.asset('assets/images/compaz.png'),
     ),
   ),
 

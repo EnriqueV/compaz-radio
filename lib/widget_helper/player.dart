@@ -142,6 +142,9 @@ class DetailedPlayer extends StatelessWidget {
                                       style: Theme.of(context)
                                           .textTheme
                                           .titleMedium),
+                                        
+
+                                          Text("Sonidos de Esperanza"),
                                 ],
                               ),
                             );

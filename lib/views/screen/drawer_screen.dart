@@ -18,9 +18,9 @@ class DrawerScreen extends StatelessWidget {
   DrawerScreen({Key? key}) : super(key: key);
 
   static String androidAppUrl =
-      'https://play.google.com/store/apps/details?id=net.appdevs.kerbonline';
+      'https://play.google.com/store/apps/details?id=compaz.spark.compaz_radio';
   static String iosAppUrl =
-      'https://apps.apple.com/ph/app/kerbonline/id1531759968';
+      'https://apps.apple.com/app/radio-compaz/id6741866215';
 
   //share link
   Future<void> share() async {
@@ -152,7 +152,7 @@ class DrawerScreen extends StatelessWidget {
         ),
         // Nuevos botones añadidos
         MenuItemWidget(
-          screenName: 'Donar',
+          screenName: 'Ofrendar',
           icon: Icons.monetization_on,
           onPressed: _launchDonateUrl,
         ),
