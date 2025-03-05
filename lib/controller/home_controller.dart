@@ -60,6 +60,8 @@ class HomeController extends GetxController {
   }
 
   void _setupAudioPlayerListeners() {
+    assetsAudioPlayer.setLoopMode(LoopMode.playlist);
+
     // Estado de reproducción
     assetsAudioPlayer.isPlaying.listen((playing) {
       isPressed.value = playing;
@@ -96,10 +98,19 @@ class HomeController extends GetxController {
         ),
         loopMode: LoopMode.playlist,
         showNotification: true,
-        autoStart: false,
+        autoStart: true,
         notificationSettings: NotificationSettings(
           stopEnabled: false,
           customPlayPauseAction: (playing) => togglePlay(),
+          prevEnabled: false,
+          nextEnabled: false,
+          seekBarEnabled: false,
+        ),
+        playInBackground: PlayInBackground.enabled,
+        headPhoneStrategy: HeadPhoneStrategy.pauseOnUnplug,
+        audioFocusStrategy: AudioFocusStrategy.request(
+          resumeAfterInterruption: true,
+          resumeOthersPlayersAfterDone: false,
         ),
       );
     } catch (e) {

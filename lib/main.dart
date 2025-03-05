@@ -11,15 +11,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:compaz_radio/helper/admob_helper.dart';
-import 'package:compaz_radio/languages/datastorage_service.dart';
-import 'package:compaz_radio/languages/language_translation.dart';
-import 'package:compaz_radio/routes/routes.dart';
-import 'package:compaz_radio/utils/custom_color.dart';
-import 'package:compaz_radio/utils/strings.dart';
-import 'package:compaz_radio/utils/themes.dart';
-import 'package:onesignal_flutter/onesignal_flutter.dart'; 
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -53,7 +44,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initPlatformState() async {
     const String oneSignalAppId = '4befb585-a3a7-4bf6-8b15-2549c26f861a';
-  //  await OneSignal.shared.setAppId(oneSignalAppId);
+    //  await OneSignal.shared.setAppId(oneSignalAppId);
   }
 
   final dark = ThemeData.dark();
@@ -97,7 +88,7 @@ class _MyAppState extends State<MyApp> {
           defaultThemeId: AppThemes.dark,
           builder: (context, theme) {
             return GetMaterialApp(
-              builder: (context, widget) {   
+              builder: (context, widget) {
                 return MediaQuery(
                   // ignore: deprecated_member_use
                   data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
