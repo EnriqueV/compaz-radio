@@ -27,8 +27,8 @@ class DrawerScreen extends StatelessWidget {
     await FlutterShare.share(
       title: Strings.multiRadio,
       text: Platform.isAndroid
-          ? 'Multi Radio Play Store Link'
-          : 'Multi Radio App Store Link',
+          ? 'Radio Compaz Play Store Link'
+          : 'Radio Compaz App Store Link',
       linkUrl: Platform.isAndroid ? androidAppUrl : iosAppUrl,
     );
   }

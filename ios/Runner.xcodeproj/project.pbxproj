@@ -381,8 +381,8 @@
 				CURRENT_PROJECT_VERSION = 3.2.9;
 				DEVELOPMENT_TEAM = HQ4V6VW78P;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 3.2.7;
-				FLUTTER_BUILD_NUMBER = 3.2.7;
+				FLUTTER_BUILD_NAME = 3.2.8;
+				FLUTTER_BUILD_NUMBER = 3.2.8;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Radio Compaz";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -524,8 +524,8 @@
 				CURRENT_PROJECT_VERSION = 3.2.9;
 				DEVELOPMENT_TEAM = HQ4V6VW78P;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 3.2.7;
-				FLUTTER_BUILD_NUMBER = 3.2.7;
+				FLUTTER_BUILD_NAME = 3.2.8;
+				FLUTTER_BUILD_NUMBER = 3.2.8;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Radio Compaz";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -561,8 +561,8 @@
 				CURRENT_PROJECT_VERSION = 3.2.9;
 				DEVELOPMENT_TEAM = HQ4V6VW78P;
 				ENABLE_BITCODE = NO;
-				FLUTTER_BUILD_NAME = 3.2.7;
-				FLUTTER_BUILD_NUMBER = 3.2.7;
+				FLUTTER_BUILD_NAME = 3.2.8;
+				FLUTTER_BUILD_NUMBER = 3.2.8;
 				INFOPLIST_FILE = Runner/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Radio Compaz";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
