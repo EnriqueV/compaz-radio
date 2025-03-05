@@ -9,7 +9,7 @@ import '../model/banner_model.dart';
 
 class HomeController extends GetxController {
   // VARIABLES
-  
+
   // Audio Player
   final assetsAudioPlayer = AssetsAudioPlayer();
   RxInt index = 0.obs;
@@ -35,6 +35,15 @@ class HomeController extends GetxController {
     _initializeController();
     _setupAudioPlayerListeners();
     fetchBanners();
+  }
+
+  @override
+  void onReady() {
+    super.onReady();
+    Future.delayed(
+      Duration(seconds: 1, milliseconds: 500),
+      () => togglePlay(play: true),
+    );
   }
 
   @override
@@ -114,17 +123,27 @@ class HomeController extends GetxController {
     _retryAudioCall();
   }
 
-  void togglePlay() async {
+  void togglePlay({bool? play}) async {
     try {
-      if (assetsAudioPlayer.isPlaying.value) {
+      if (play == true) {
+        await assetsAudioPlayer.play();
+      } else if (play == false) {
         await assetsAudioPlayer.pause();
       } else {
-        await assetsAudioPlayer.play();
+        if (assetsAudioPlayer.isPlaying.value) {
+          await assetsAudioPlayer.pause();
+        } else {
+          await assetsAudioPlayer.play();
+        }
       }
       isPressed.value = assetsAudioPlayer.isPlaying.value;
       update();
     } catch (e) {
-      print("Error toggling play: $e");
+      Get.snackbar(
+        'Error',
+        'Error al intentar reproducir el audio, intenta nuevamente',
+      );
+      printError(info: "Error toggling play: $e");
     }
   }
 
@@ -137,8 +156,7 @@ class HomeController extends GetxController {
   Future<void> fetchBanners() async {
     try {
       final response = await http.get(Uri.parse(
-        'https://compaz-api-production.up.railway.app/api/images/folder/banners_compaz'
-      ));
+          'https://compaz-api-production.up.railway.app/api/images/folder/banners_compaz'));
 
       if (response.statusCode == 200) {
         final List<dynamic> data = json.decode(response.body);
@@ -154,7 +172,8 @@ class HomeController extends GetxController {
     bannerTimer?.cancel();
     bannerTimer = Timer.periodic(const Duration(seconds: 15), (timer) {
       if (banners.isNotEmpty) {
-        currentBannerIndex.value = (currentBannerIndex.value + 1) % banners.length;
+        currentBannerIndex.value =
+            (currentBannerIndex.value + 1) % banners.length;
       }
     });
   }
