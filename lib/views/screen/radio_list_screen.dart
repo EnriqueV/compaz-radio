@@ -8,7 +8,8 @@ import 'package:compaz_radio/widget_helper/player.dart';
 import 'package:compaz_radio/data/radio_list_data.dart';
 import 'dart:ui'; // Añadido para el efecto glassmorphism
 
-ValueNotifier<RadioListModel?> currentlyPlaying = ValueNotifier(radioChanelList[0]);
+ValueNotifier<RadioListModel?> currentlyPlaying =
+    ValueNotifier(radioChanelList[0]);
 const double playerMinHeight = 70;
 const miniPlayerPercentageDeclaration = 0.2;
 
@@ -65,16 +66,6 @@ class RadioListScreen extends StatelessWidget {
 Widget _bodyWidget(BuildContext context) {
   return Stack(
     children: [
-      // Background con imagen
-      Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/background.jpg'), // Asegúrate de tener esta imagen
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-      
       // Capa de glassmorphism
       BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
@@ -112,16 +103,16 @@ Widget _bodyWidget(BuildContext context) {
           ),
         ),
       ),
-      
+
       // Player
       ValueListenableBuilder(
         valueListenable: currentlyPlaying,
         builder: (BuildContext context, RadioListModel? radioListModel,
                 Widget? child) =>
             DetailedPlayer(
-              radioListModel: radioListModel ?? radioChanelList[0],
-              controller: playerController,
-            ),
+          radioListModel: radioListModel ?? radioChanelList[0],
+          controller: playerController,
+        ),
       ),
     ],
   );
