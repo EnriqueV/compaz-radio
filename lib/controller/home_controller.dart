@@ -82,7 +82,10 @@ class HomeController extends GetxController {
 
     // Force auto play at start
     assetsAudioPlayer.onReadyToPlay.listen((audio) {
-      togglePlay(play: true);
+      Future.delayed(
+        Duration(seconds: 1),
+        () => togglePlay(play: true),
+      );
     });
   }
 
