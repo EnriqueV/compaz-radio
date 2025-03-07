@@ -3,6 +3,10 @@ PODS:
     - Flutter
   - assets_audio_player_web (0.0.1):
     - Flutter
+  - connectivity_plus (0.0.1):
+    - Flutter
+  - device_info_plus (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - flutter_inappwebview_ios (0.0.1):
     - Flutter
@@ -94,6 +98,8 @@ PODS:
 DEPENDENCIES:
   - assets_audio_player (from `.symlinks/plugins/assets_audio_player/ios`)
   - assets_audio_player_web (from `.symlinks/plugins/assets_audio_player_web/ios`)
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `Flutter`)
   - flutter_inappwebview_ios (from `.symlinks/plugins/flutter_inappwebview_ios/ios`)
   - flutter_share (from `.symlinks/plugins/flutter_share/ios`)
@@ -120,6 +126,10 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/assets_audio_player/ios"
   assets_audio_player_web:
     :path: ".symlinks/plugins/assets_audio_player_web/ios"
+  connectivity_plus:
+    :path: ".symlinks/plugins/connectivity_plus/ios"
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
   Flutter:
     :path: Flutter
   flutter_inappwebview_ios:
@@ -150,6 +160,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   assets_audio_player: edee322b9cb625571b830b35872ead1a295fd917
   assets_audio_player_web: 19826380c44375761aa0b9053665c1e3fbc3b86b
+  connectivity_plus: 2a701ffec2c0ae28a48cf7540e279787e77c447d
+  device_info_plus: bf2e3232933866d73fe290f2942f2156cdd10342
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_inappwebview_ios: 6f63631e2c62a7c350263b13fa5427aedefe81d4
   flutter_share: 4be0208963c60b537e6255ed2ce1faae61cd9ac2

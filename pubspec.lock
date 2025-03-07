@@ -105,6 +105,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.19.1"
+  connectivity_plus:
+    dependency: transitive
+    description:
+      name: connectivity_plus
+      sha256: "04bf81bb0b77de31557b58d052b24b3eee33f09a6e7a8c68a3e247c7df19ec27"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.3"
+  connectivity_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: connectivity_plus_platform_interface
+      sha256: "42657c1715d48b167930d5f34d00222ac100475f73d10162ddf43e714932f204"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   crypto:
     dependency: transitive
     description:
@@ -137,6 +153,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.11"
+  device_info_plus:
+    dependency: transitive
+    description:
+      name: device_info_plus
+      sha256: "72d146c6d7098689ff5c5f66bcf593ac11efc530095385356e131070333e64da"
+      url: "https://pub.dev"
+    source: hosted
+    version: "11.3.0"
+  device_info_plus_platform_interface:
+    dependency: transitive
+    description:
+      name: device_info_plus_platform_interface
+      sha256: "0b04e02b30791224b31969eb1b50d723498f402971bff3630bca2ba839bd1ed2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.2"
   dropdown_button2:
     dependency: "direct main"
     description:
@@ -384,6 +416,38 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.9.0"
+  launchdarkly_common_client:
+    dependency: transitive
+    description:
+      name: launchdarkly_common_client
+      sha256: e48ca11a2e3f597864dcf41a3cec669d075c4ba16d02317679cdf4a2e4c1c9e5
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.1"
+  launchdarkly_dart_common:
+    dependency: transitive
+    description:
+      name: launchdarkly_dart_common
+      sha256: b15c214f90116044959390468e1e33b2cbb9b3d1e6e03a3396cd2076e8a8144f
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  launchdarkly_event_source_client:
+    dependency: transitive
+    description:
+      name: launchdarkly_event_source_client
+      sha256: "7d99df4deb05c42b1ad731a7264ee49cbc4c1e1d70e731e788fd9eb34e500b2a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
+  launchdarkly_flutter_client_sdk:
+    dependency: "direct main"
+    description:
+      name: launchdarkly_flutter_client_sdk
+      sha256: a6d91255ae0d42e051f7e004cdfbb075baca9a163ccca5e993f9389aca523c6a
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.9.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -464,6 +528,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  nm:
+    dependency: transitive
+    description:
+      name: nm
+      sha256: "2c9aae4127bdc8993206464fcc063611e0e36e72018696cd9631023a31b24254"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
   onesignal_flutter:
     dependency: "direct main"
     description:
@@ -925,6 +997,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.10.1"
+  win32_registry:
+    dependency: transitive
+    description:
+      name: win32_registry
+      sha256: "21ec76dfc731550fd3e2ce7a33a9ea90b828fdf19a5c3bcf556fa992cfa99852"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.5"
   xdg_directories:
     dependency: transitive
     description:
