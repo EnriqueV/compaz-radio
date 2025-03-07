@@ -2,6 +2,7 @@ import 'package:compaz_radio/helper/admob_helper.dart';
 import 'package:compaz_radio/languages/datastorage_service.dart';
 import 'package:compaz_radio/languages/language_translation.dart';
 import 'package:compaz_radio/routes/routes.dart';
+import 'package:compaz_radio/services/launchdarkly_services.dart';
 import 'package:compaz_radio/utils/custom_color.dart';
 import 'package:compaz_radio/utils/strings.dart';
 import 'package:compaz_radio/utils/themes.dart';
@@ -16,6 +17,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init(); // initializing getStorage
   await initialConfig();
+
+  final ldService = LaunchDarklyService();
+  await ldService.initialize();
+
   AdMobHelper.initialization();
   runApp(
     const ProviderScope(child: MyApp()),
