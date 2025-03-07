@@ -39,6 +39,7 @@ dependencies:
   lottie: ^2.3.2
   webview_flutter: ^4.4.2
   launchdarkly_flutter_client_sdk: ^4.9.0
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:
