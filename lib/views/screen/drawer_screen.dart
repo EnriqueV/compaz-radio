@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:compaz_radio/services/launchdarkly_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,8 @@ class DrawerScreen extends StatelessWidget {
 
   // Función para abrir el mapa
   Future<void> _launchMapUrl() async {
-    final Uri url = Uri.parse('https://www.google.com/maps/place/Iglesia+Compaz/data=!4m2!3m1!1s0x0:0x80e456429662dcf6?sa=X&ved=1t:2428&ictx=111');
+    final Uri url = Uri.parse(
+        'https://www.google.com/maps/place/Iglesia+Compaz/data=!4m2!3m1!1s0x0:0x80e456429662dcf6?sa=X&ved=1t:2428&ictx=111');
     if (!await launchUrl(url)) {
       throw Exception('No se pudo abrir $url');
     }
@@ -112,22 +114,20 @@ class DrawerScreen extends StatelessWidget {
   }
 
   _listWidget(BuildContext context) {
-    return Column(
-      children: [
-        MenuItemWidget(
-          screenName: Strings.liveChatWithRj.tr,
-          icon: Icons.chat,
-          onPressed: () {
-            Get.toNamed(Routes.liveChatScreen);
-          },
-        ),
-        MenuItemWidget(
-          screenName: Strings.aboutUs.tr,
-          icon: Icons.info,
-          onPressed: () {
-            Get.toNamed(Routes.aboutScreen);
-          },
-        ),
+    final ldClient = LaunchDarklyService().client;
+
+    var items = [
+      MenuItemWidget(
+        id: 'chat',
+        screenName: Strings.liveChatWithRj.tr,
+        icon: Icons.chat,
+        onPressed: () => Get.toNamed(Routes.liveChatScreen),
+      ),
+      MenuItemWidget(
+        screenName: Strings.aboutUs.tr,
+        icon: Icons.info,
+        onPressed: () => Get.toNamed(Routes.aboutScreen),
+      ),
       /*  MenuItemWidget(
           screenName: Strings.settings.tr,
           icon: Icons.settings,
@@ -136,32 +136,46 @@ class DrawerScreen extends StatelessWidget {
           },
         ),
        */
-        MenuItemWidget(
-          screenName: Strings.share.tr,
-          icon: Icons.share,
-          onPressed: () {
-            share();
-          },
+      MenuItemWidget(
+        screenName: Strings.share.tr,
+        icon: Icons.share,
+        onPressed: () => share(),
+      ),
+      MenuItemWidget(
+        screenName: Strings.rateUs.tr,
+        icon: Icons.star_half,
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => _dialog,
         ),
-        MenuItemWidget(
-          screenName: Strings.rateUs.tr,
-          icon: Icons.star_half,
-          onPressed: () {
-            showDialog(context: context, builder: (context) => _dialog);
-          },
-        ),
-        // Nuevos botones añadidos
-        MenuItemWidget(
-          screenName: 'Ofrendar',
-          icon: Icons.monetization_on,
-          onPressed: _launchDonateUrl,
-        ),
-        MenuItemWidget(
-          screenName: 'Cómo Llegar',
-          icon: Icons.location_on,
-          onPressed: _launchMapUrl,
-        ),
-      ],
+      ),
+      // Nuevos botones añadidos
+      MenuItemWidget(
+        screenName: 'Ofrendar',
+        icon: Icons.monetization_on,
+        onPressed: _launchDonateUrl,
+      ),
+      MenuItemWidget(
+        screenName: 'Cómo Llegar',
+        icon: Icons.location_on,
+        onPressed: _launchMapUrl,
+      ),
+    ];
+
+    return StreamBuilder(
+      stream: ldClient.flagChanges,
+      builder: (ctx, snapshot) {
+        bool showChat = ldClient.boolVariation(
+          'COMPAZ_SHOW_LIVE_CHAT',
+          false,
+        );
+
+        return Column(
+          children: items
+              .where((element) => element.id != 'chat' || showChat)
+              .toList(),
+        );
+      },
     );
   }
 }
