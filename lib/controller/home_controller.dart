@@ -79,6 +79,11 @@ class HomeController extends GetxController {
     assetsAudioPlayer.playlistAudioFinished.listen((Playing playing) {
       print("Audio finished: ${playing.audio.assetAudioPath}");
     });
+
+    // Force auto play at start
+    assetsAudioPlayer.onReadyToPlay.listen((audio) {
+      togglePlay(play: true);
+    });
   }
 
   void _disposeResources() {
